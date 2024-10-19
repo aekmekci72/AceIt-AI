@@ -1,0 +1,130 @@
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 300px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  height: 100%;
+  box-sizing: border-box; 
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  margin-right: 10px;
+}
+
+.upload-source-btn {
+  margin-bottom: 20px;
+}
+
+.notes {
+  margin-top: 20px;
+}
+
+.note {
+  margin-bottom: 10px;
+}
+
+.ask-question {
+  margin-bottom: 20px;
+}
+
+.toggle-container {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.toggle-container span {
+  cursor: pointer;
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s;
+}
+
+.toggle-container .toggle-active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.upload-options button {
+  margin-right: 10px;
+}
+.video-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.video-item {
+  margin: 10px; /* Adjust margin as needed */
+}
+.video-stuff {
+  width: 2000px;
+  height: 1500px;
+  display: flex;
+
+}
+.video-item video {
+  width: 100%;
+  max-width: 300px; /* Adjust max-width as needed */
+  height: auto;
+}
+.generate-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}

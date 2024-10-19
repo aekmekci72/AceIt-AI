@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+body {
+    background-color: #E8ECEF;
+    font-family: 'Red Hat Display', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.login-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.login-container {
+    background-color: #ffffff;
+    padding: 3%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 40%;
+}
+
+.login-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #9e9b96;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    color: #798385;
+}
+
+.input-group label {
+    font-size: 1.2rem;
+    color: #bfbfbf;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #9e9b96;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #798385;
+}
+
+button {
+    background-color: #92C7CF;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 15px 0;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #88b1b8;
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+p {
+    font-size: 1rem;
+    color: #333333;
+}
+
+p a {
+    color: #3a77f7;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: red;
+    font-size: 1rem;
+    margin-top: -10px;
+}

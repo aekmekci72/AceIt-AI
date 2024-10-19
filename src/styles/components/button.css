@@ -1,0 +1,18 @@
+.category-btn {
+    border: none;
+    border-radius: 8px;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 30%;
+}
+
+.category-btn:hover {
+    background-color: #88b1b8;
+    transform: translateY(-3px);
+}
+
+.category-btn:active {
+    transform: translateY(1px);
+}

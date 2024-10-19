@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+body {
+    background-color: #E8ECEF;
+    font-family: 'Red Hat Display', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+nav {
+    background-color: #c9d4d4;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav img {
+    height: 100px;
+    margin-right: 1rem;
+}
+
+nav input {
+    padding: 0.5rem;
+    width: 400px;
+    color: gray;
+    border: 1px solid gray;
+}
+
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav button {
+    padding: 0.5rem 1rem;
+    background-color: #92C7CF;
+    border: none;
+    color: #fafafa;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+    background-color: #7aa6a8;
+}
+
+.main {
+    text-align: center;
+    padding: 2rem;
+}
+
+.main h1 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    color: #99aab0;
+}
+
+.main p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #88b1b8;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.6); /* Set a semi-transparent background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    width: 200px;
+    height:100px;
+    text-align: center; /* Center the text horizontally */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Align items vertically */
+    justify-content: center; /* Center items vertically */
+    transition: transform 0.2s;
+    backdrop-filter: blur(10px); /* Add a blur effect */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    backdrop-filter: none; /* Remove the blur effect on hover */
+}
+
+.card-title {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    text-align: center; /* Center the text horizontally */
+}
+
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+.loading-spinner {
+    border: 8px solid white; /* Light grey */
+    border-top: 8px solid #6DC5D1; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+
+  .card,
+.recommendation-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 8px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  width: 20%;
+  align-items: center;
+}
+
+.card:hover,
+.recommendation-card:hover {
+  transform: scale(1.05);
+}
+
+.card-title,
+.recommendation-card .card-title {
+  font-size: 1.2em;
+}
+
+.recommendation-card .card-content {
+  margin-top: 8px;
+}
+
+.recommendation-card {
+    background-color: rgba(255, 255, 255, 0.6); /* Set a semi-transparent background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    width: 80%;
+    text-align: center; /* Center the text horizontally */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Align items vertically */
+    justify-content: center; /* Center items vertically */
+    transition: transform 0.2s;
+    backdrop-filter: blur(10px); /* Add a blur effect */
+
+}
+
+.create-section-button {
+  margin-top: 8px;
+  padding: 8px 16px;
+  background-color: #6DC5D1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.create-section-button:hover {
+  background-color: #7aa6a8;
+}
+
+.recommendations-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure the modal is on top of other elements */
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+    max-height: 90%;
+    overflow-y: auto;
+    position: relative;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Modal styling */
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+  }
+  
+  @keyframes animatetop {
+    from {
+      top: -300px;
+      opacity: 0;
+    }
+    to {
+      top: 0;
+      opacity: 1;
+    }
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal h2 {
+    margin-bottom: 20px;
+  }
+  
+  .modal-content input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  .modal-content label {
+    margin-right: 15px;
+  }
+  
+  .modal-content select {
+    margin-left: 10px;
+    padding: 5px;
+  }
+  
+  .modal-content input[type="text"] {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: calc(100% - 10px); /* Adjust width to fit padding */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .modal-content button {
+    padding: 10px 20px;
+    background-color: #92a8d1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .modal-content button:hover {
+    background-color: #7698c1;
+  }
+  

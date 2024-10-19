@@ -1,0 +1,14 @@
+/* SavedResponsesPage.css */
+@keyframes rise {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-5px);
+    }
+  }
+  
+  .flashcard:hover {
+    animation: rise 0.5s forwards;
+  }
+  

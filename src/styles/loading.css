@@ -1,0 +1,14 @@
+.loading-spinner {
+    border: 8px solid white; /* Light grey */
+    border-top: 8px solid #6DC5D1; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }  
